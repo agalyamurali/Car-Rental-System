@@ -13,7 +13,7 @@
 }
 
 body {
-    background-image: url('peter-broomfield-m3m-lnR90uM-unsplash.jpg');
+    background-image: url('assets/main-bg.jpg');
     background-size: cover;  /* Ensures the image covers the whole screen */
     background-position: center;  /* Centers the image */
     background-repeat: no-repeat;  
@@ -120,9 +120,9 @@ span{
     padding-left: 20px;
     font-family:var(--font-fam)
 }
-.icons{
+/* .icons{
     
-}
+} */
 .main-hero{
     text-decoration: none;
     color:dimgray;
