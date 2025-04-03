@@ -1,0 +1,93 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Headings */
+h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.8);
+}
+
+/* Tables */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+/* Table Headers */
+th {
+    background: rgba(255, 204, 0, 0.9);
+    color: black;
+    padding: 12px;
+    font-size: 18px;
+}
+
+/* Table Cells */
+td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    color: white;
+}
+
+/* Car Images */
+.car-img {
+    width: 100px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(255, 204, 0, 0.5);
+}
+
+.car-img:hover {
+    transform: scale(1.1);
+}
+
+/* Buttons */
+button {
+    padding: 10px 16px;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Booked Cars Section */
+#booked-cars {
+    margin-top: 30px;
+}
+
+/* Smooth Fade-In Animation */
+table, h2 {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
