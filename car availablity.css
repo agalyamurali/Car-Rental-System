@@ -1,0 +1,38 @@
+body{
+        
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    background: url('car.png');
+    background-size: cover; background-position: center;
+
+}
+h1{
+    text-align: center;
+    color: rgb(165, 67, 34);
+}
+
+table{
+    table-align:right;
+    width: 800px; 
+    text-align: left;
+    margin-top: 20;
+    font: size 20px; 
+    table-border:bold;
+}
+th, td{
+    border: 1px solid black;
+    padding: 20px; 
+    text-align: center;
+    font: size 20px; 
+
+}
+th{
+    background: rgba(202, 179, 49, 0.6);
+    font-family: bold;
+    font-size:xx-large;
+
+}
+td{
+    font-size: x-large;
+    background-color:rgba(31, 240, 240, 0.2);
+}
