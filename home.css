@@ -13,7 +13,7 @@
 }
 
 body {
-    background-image: url('main-bg.jpg');
+    background-image: url('assets/main-bg.jpg');
     background-size: cover;  /* Ensures the image covers the whole screen */
     background-position: center;  /* Centers the image */
     background-repeat: no-repeat;  
