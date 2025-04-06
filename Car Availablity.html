@@ -3,66 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>availability</title>
-    <link rel="stylesheet" href="car availablity.css">
+    <title>Availability</title>
+
+    <!-- External AOS animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="car availablity.css">
+
+
+
 </head>
 
-
 <body>
-    <h1>DRIVE ANYWHERE, ANYTIME </h1>
-    <h1>Available Cars</h1>
-    
-    <table align="center">
-        
-        <tr>
-            
-            <th>Car Model</th>
-            <th>Seat Capacity</th>
-            <th>Price per Day</th>
-            <th>Status</th>
-        </tr>
-        <tr>
-            
-            <td>Tesla</td>
-            <td>4</td>
-            <td>$500</td>
-            <td>Available</td>
-        </tr>
-        <tr>
-            
-            <td>BMW</td>
-            <td>4</td>
-            <td>$300</td>
-            <td>Available</td>
-        </tr>
-        <tr>
-            
-            <td>Ford Mustag</td>
-            <td>7</td>
-            <td>$1000</td>
-            <td>Booked</td>
-        </tr>
-        <tr>
-           
-            <td>Toyota</td>
-            <td>6</td>
-            <td>$50</td>
-            <td>Available</td>
-        </tr>
-        <tr>
-            
-            <td>Astonis</td>
-            <td>4</td>
-            <td>$500</td>
-            <td>Booked</td>
-        </tr>
-        <tr>
-            
-            <td>Majesta</td>
-            <td>6</td>
-            <td>$600</td>
-            <td>Available</td>
-        </tr>
+
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="" data-aos ='fade-up' data-aos-duration="1400">
+        </div>
+        <div class="nav-list-holder">
+            <ul class="nav-list">
+               <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="300"><a href="home.html" class="link">Home</a></li>
+               <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="300"> <a href="RentalForm.html" class="link" >Rent Car</a></li>
+               <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="400"><a href="Car Availablity.html" class="link">Available Cars</a></li>
+               <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="500"><a href="RentedCars.html"  class="link">Rented Cars</a></li>
+            </ul>
+        </div>
+    </div>
+    <h1 data-aos="fade-up" data-aos-duration="1400">Available Cars</h1>
+    <!-- <h2 data-aos="fade-down" data-aos-duration="1400" data-aos-delay="100"></h2> -->
+
+    <table data-aos="zoom-in-up" data-aos-duration="1600">
+        <thead>
+            <tr>
+                <th>car_ID</th>
+                <th>car_model</th>
+                <th>Seat_Capacity</th>
+                <th>price</th>
+                <th>car_status</th>
+            </tr>
+        </thead>
+        <tbody id="availableTable">
+            <!-- JavaScript will populate rows here -->
+        </tbody>
     </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 100 });
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

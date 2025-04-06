@@ -8,22 +8,38 @@
 </head>
 <body>
 
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="" data-aos ='fade-up' data-aos-duration="1400">
+        </div>
+        <div class="nav-list-holder">
+            <ul class="nav-list">
+               <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="300"><a href="home.html" class="link">Home</a></li>
+               <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="300"> <a href="RentalForm.html" class="link" >Rent Car</a></li>
+               <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="400"><a href="Car Availablity.html" class="link">Available Cars</a></li>
+               <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="500"><a href="RentedCars.html"  class="link">Rented Cars</a></li>
+            </ul>
+        </div>
+    </div>
+    
     <h2>Booked Cars</h2>
     <table id="booked-cars">
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Brand</th>
-                <th>Model</th>
-                <th>Year</th>
-                <th>Price per Day</th>
+              <tr>
+                <!-- <th>Image</th> -->
+                <!-- <th>Brand</th> -->
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>days</th>
+                <th>model</th>
             </tr>
-        </thead>
-        <tbody>
+
+        <tbody id="rentedcars">
             <!-- Booked cars will be added here dynamically -->
         </tbody>
     </table>
 
-    <script src="script.js"></script>
+    <script src="script.js" ></script>
+     
 </body>
 </html>
