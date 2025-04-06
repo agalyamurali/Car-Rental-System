@@ -1,60 +1,51 @@
-// Sample car data
-const cars = [
-    { id: 1, brand: "Toyota", model: "Camry", year: 2022, price: 50, image: "images/toyota.jpg" },
-    { id: 2, brand: "Honda", model: "Civic", year: 2021, price: 45, image: "images/honda.jpg" },
-    { id: 3, brand: "Ford", model: "Mustang", year: 2023, price: 70, image: "images/mustang.jpg" }
-];
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("http://localhost:8080/availablecars")
+        .then(response => response.json())
+        .then(cars => {
+            const dataTable = document.getElementById("availableTable");
+            if (!dataTable) {
+                console.error("availableTable not found in DOM!");
+                return;
+            }
+            cars.forEach(car => {
+                const row = `
+                    <tr>
+                        <td>${car.car_id}</td>
+                        <td>${car.car_model}</td>
+                        <td>${car.seat_capacity}</td>
+                        <td>${car.price}</td>
+                        <td>${car.car_status}</td>
+                    </tr>`;
+                dataTable.innerHTML += row;
+            });
+        })
+        .catch(error => {
+            console.error("Error fetching available cars:", error);
+        });
+});
 
-const bookedCars = [];
 
-// Function to display available cars
-function displayAvailableCars() {
-    const availableTableBody = document.querySelector("#available-cars tbody");
-    availableTableBody.innerHTML = ""; // Clear table
 
-    cars.forEach(car => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td><img src="${car.image}" class="car-img"></td>
-            <td>${car.brand}</td>
-            <td>${car.model}</td>
-            <td>${car.year}</td>
-            <td>$${car.price}</td>
-            <td><button onclick="bookCar(${car.id})">Book Now</button></td>
-        `;
-        availableTableBody.appendChild(row);
-    });
-}
+ window.onload = function () {
+        fetch("http://localhost:8080/availablecars/booked") // Update with correct endpoint
+            .then((response) => response.json())
+            .then((bookedCars) => {
+                const dataTable = document.getElementById("rentedcars");
 
-// Function to display booked cars
-function displayBookedCars() {
-    const bookedTableBody = document.querySelector("#booked-cars tbody");
-    bookedTableBody.innerHTML = ""; // Clear table
+                bookedCars.forEach((bookedCar) => {
+                    const row = `
+                        <tr>
+                            <td>${bookedCar.name}</td>
+                            <td>${bookedCar.email}</td>
+                            <td>${bookedCar.phone}</td>
+                            <td>${bookedCar.days}</td>
+                            <td>${bookedCar.model}</td>
+                        </tr>`;
+                    dataTable.innerHTML += row;
+                });
+            })
+            .catch((error) => {
+                console.error("Error fetching booked cars:", error);
+            });
+    };
 
-    bookedCars.forEach(car => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td><img src="${car.image}" class="car-img"></td>
-            <td>${car.brand}</td>
-            <td>${car.model}</td>
-            <td>${car.year}</td>
-            <td>$${car.price}</td>
-        `;
-        bookedTableBody.appendChild(row);
-    });
-}
-
-// Function to book a car
-function bookCar(carId) {
-    const carIndex = cars.findIndex(car => car.id === carId);
-    if (carIndex !== -1) {
-        const bookedCar = cars.splice(carIndex, 1)[0]; // Remove from available cars
-        bookedCars.push(bookedCar); // Add to booked cars
-
-        displayAvailableCars(); // Refresh available cars table
-        displayBookedCars(); // Refresh booked cars table
-    }
-}
-
-// Initialize tables
-displayAvailableCars();

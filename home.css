@@ -35,6 +35,7 @@ body {
 }
 
 .nav-list-holder{
+  
     width:60%;
     margin-top: 30px;
 }
@@ -84,10 +85,10 @@ span{
 .display-btn{
     position: absolute;
     left: 80%;
-    bottom: -50px;
+    bottom: -20px;
 
 }
-.display-btn a{
+.btn{
     
     display: inline-block;
     text-decoration: none;
@@ -101,7 +102,7 @@ span{
     border-top-left-radius: 0;
     transition: all .6s ease;
 }
-.display-btn a:hover{
+.btn:hover{
     transform: scale(1.1);
 }
 
@@ -110,7 +111,7 @@ span{
     margin: 0 80px;
     color: var(--silver-color);
     border-left: 6px solid #FFD700;
-    margin-top: 480px;
+    margin-top: 450px;
 }
 .rate h3{
     padding-left: 20px;
@@ -120,13 +121,21 @@ span{
     padding-left: 20px;
     font-family:var(--font-fam)
 }
-/* .icons{
-    
-} */
-.main-hero{
+/* .icons */
+.icons{
+    position: relative;
+    left:5%;
+    padding-top: 40px;
+}
+.main-hero {
     text-decoration: none;
-    color:dimgray;
+    color: dimgray;
     border: 2px solid rgb(92, 92, 91);
     border-radius: 50%;
     padding: 8px;
+    transition: all 0.5s ease;
+}
+
+.main-hero:hover {
+    transform: scale(0.5);
 }
