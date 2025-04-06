@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <title>Book Your Ride - rentRideX</title>
+
+      <!-- Correct AOS CSS Link -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+
     <style>
         /* Deep Blue Background */
         body {
@@ -130,11 +135,12 @@
                <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="300"> <a href="RentalForm.html" class="link" >Rent Car</a></li>
                <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="400"><a href="Car Availablity.html" class="link">Available Cars</a></li>
                <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="500"><a href="RentedCars.html"  class="link">Rented Cars</a></li>
+               <li data-aos = 'flip-down' data-aos-duration="1400" data-aos-delay="500"><a href="about.html"  class="link">About Us</a></li>
             </ul>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" data-aos = 'fade-left' data-aos-duration="1400" data-aos-delay="300">
         <h2>🚗 Book Your Luxury Ride</h2>
 
         <form action="http://localhost:8080/bookings" method="post">
@@ -173,6 +179,14 @@
             <button type="submit">🚀 Reserve Now</button>
         </form>
     </div>
+
+      <!-- Correct AOS JS Link -->
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          offset:100,
+        });
+      </script>
         <script src="script.js"></script>
 </body>
 </html>

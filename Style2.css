@@ -8,7 +8,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
-    background: url('assets/rented1.gif')no-repeat center center fixed;
+    background: url('assets/rental-bg.gif')no-repeat center center fixed;
     background-size: cover;
 }
 .nav-bar{
